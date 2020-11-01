@@ -1,0 +1,74 @@
+yarn add firebase
+yarn add react-firebaseui
+PHR FIREBASE PAR PRJECT BANAO ,
+PHR AUTHENTICATION PAR JAO AR KOI BHI ACCCOUNT SELECT KARO JIS KI CHAHYE,
+PHR AP AIS LINK PAR JAO AR APP ADD KARWAO APNI FB KI 
+ID PAR https://developers.facebook.com/.
+YAHA SA AP NEW APP BANAO AR ID COPY KARKAY FIREBASE AR PUT KARDOU WOH MANG RHA HOGA.
+
+phr ap facebook login par click karo link jo hai waha par hoga phr "web" ka option par click ar apni website ka link dalo abhi localhost jo tha woh daldia phe nwxt nwxt kartay raho ar phr setting par jakar basics par click karo waha a "secret"  mil jai ga woh firebase mai daldena .,
+phr wahi firebase apko dega ek link woh ab facebook ki setting mai jana ar waha "Valid OAuth Redirect URI" ais option daldena ar save changes kardena.
+bus phr firebase mai bhi save par click karna ar hojai ga complete.
+
+
+
+FOR TWITTER:
+
+
+ais link par jakar karo https://apps.twitter.com/ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+COMPLETE GIT HUB :
+
+1)github desktop par jakar ek repositry banao 
+publish kardou , auska ek folder apkay pas ban jai ga task manager ka option sa dekhlo dekh jai ga k kaha hai bus phr wahi sa vscode khulo ar jo bi karo gai git ar ajai ga push karna paray ga
+
+
+2)ap setting ar manage access par jao ar waha sa kisi ko add kardou
+
+3(ap deploy kaisay karay surge par woh dekho,
+auskay liye pahlay surge ko install karo,
+1)npm install -g surge
+2)first time mai yeh email password pochay ga,
+surge token likhnay par lkn woh likhnay ki zaroorat nahi
+3( surge likho ar host hojai gi
+4) ap git action sa sekho kis tarah ap koi bhi change karo tou woh jo host karli website aus par bhi hojai
+aus ka liye github actions par "setup workflow for your" par jao.
+1)sab sa pahlay name: par name btadou project ka
+2)ap nechay on: push: ka mtlb yeh commit par chalna chahye yeh sab jo mai nechay batao ga , pull request hatadena abhi filhal
+3)runs on : ab batao jis par chalna chahye,
+windows,ubuntu
+4)build ka steps kia hai wo btana hai
+-uses :actions/checkout@v2
+yeh apki repositry ko samjho dekhleta hai ar phr agay kam karta hai,
+5)-name:installing node 
+uses:action/setup-node@v2-beta
+with:
+  node-version:12
+next step ap surge ko install karna ka liye aisay bolo
+-name: install surge
+run:npm install --global surge
+ap deply karna hai 
+-name:deploying using surge
+ap ab batao k pahlay path jaha index pari hai
+surge ./bootcamp2020_sample.surge.sh --token "wo ap uaha dalo lkn hum yaha nahi dalay gai qk sab dekhley gai ais lye aisko chuppanay ka liye ap yeh karo gai"
+
+setting mai secret par jao
+waha name ar value hoga waha name dou ar value ma token ap ap waha jao ais par
+surge ./bootcamp2020_sample.surge.sh --token ${{secrets.apwohnamedalojowahahai}}
+ap start commit click
